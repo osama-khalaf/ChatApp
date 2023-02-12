@@ -1,0 +1,199 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+$BG-color : #161f25;
+$Main-color : #008069;
+$Sec-color : #222e35;
+$Dark-color : #111b21;
+$Gray-color : #8696a0;
+$L-Gray-color : #d3d3d3;
+
+
+.App{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #161f25de ;
+}
+
+.card{
+  width: 300px;
+  padding: 60px;
+  border-radius: 7px;
+  background-color: white;  
+  box-shadow: 0 0 1000px 0px #00a8849c;
+  
+  
+
+  span ,p{
+    color: $Gray-color;
+  }
+
+  h1{
+    color: $Main-color;
+  }
+  
+  form{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
+    input{
+      border: none;
+      outline: none;
+      border-bottom: 1px solid $L-Gray-color;
+      padding: 10px 15px;
+    }
+    ::placeholder{
+      color: $Gray-color;
+    }
+  }
+
+  button{
+    border: none;
+    background-color: $Main-color;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+
+
+.home-container{
+  width: 80%;
+  height: 80vh;
+  background-color: $L-Gray-color;
+  border-radius: 7px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  overflow: hidden;
+}
+
+nav{
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background-color: $Gray-color;
+
+  img{
+    border-radius: 50%;
+    width: 15%;
+    height: 15%;
+  }
+
+  .menuBtn{
+    width: 12px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    cursor: pointer;
+  }
+
+  span{
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: $L-Gray-color;
+  }
+}
+
+.ContactList{
+  padding-top: 20px;
+  height: 100%;
+  background-color: $Dark-color;
+  color: white;
+  overflow: hidden;
+
+  img{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.contact{
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 10px;
+  padding: 15px 10px;
+  border-bottom: 1px solid $Sec-color;
+
+  &:hover{
+    background-color: $Gray-color;
+  }
+
+  .contact-info{
+    display: flex;
+    flex-direction: column;
+  }
+
+  p{
+    margin: 0;
+  }
+}
+
+.title-and-date{
+  display: flex;
+  align-items: center;
+
+  h4{
+    margin: 0;
+    padding: 0;
+    margin-right: auto;
+  }
+}
+
+.Chating{
+  position: relative;
+}
+
+.input{
+  height: 55px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #202c33;
+  padding: 10px 25px;
+
+
+  img{
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+
+  input{
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    background-color: #2a3942;
+    color: white;
+    border-radius: 9px;
+  }
+}
