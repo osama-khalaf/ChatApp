@@ -1,8 +1,8 @@
 import React from "react";
-import Navbar from "./Navbar";
-import Search from "./Search";
-import ContactList from "./ContactList";
-import Chating from "./Chating"
+import Navbar from "../components/Navbar";
+import Search from "../components/Search";
+import ContactList from "../components/ContactList";
+import Chating from "../components/Chating"
 
 export default function Home() {
   return (

@@ -187,6 +187,22 @@ nav{
 .Chating{
   position: relative;
   background-color: $Gray-color;
+  color: white;
+
+  .chat-info{
+    height: 40px;
+    padding: 10px 16px;
+    background-color: $Gray-color;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    img{
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+    }
+  }
 
   .input{
     height: 55px;
@@ -228,15 +244,15 @@ nav{
     }
   }
 
-  &::after{
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-image:url(../public/images/wp_132_dark.jpg);
-    background-size: contain;
-  }
+  // &::after{
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   bottom: 0;
+  //   left: 0;
+  //   right: 0;
+  //   background-image:url(../public/images/wp_132_dark.jpg);
+  //   background-size: contain;
+  // }
 }
 
