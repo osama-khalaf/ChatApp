@@ -16,7 +16,7 @@ $BG-color : #161f25;
 $Main-color : #008069;
 $Sec-color : #222e35;
 $Dark-color : #111b21;
-$Gray-color : #8696a0;
+$Gray-color : #202c33;
 $L-Gray-color : #d3d3d3;
 
 
@@ -25,7 +25,7 @@ $L-Gray-color : #d3d3d3;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #161f25de ;
+  background-color: $Dark-color ;
 }
 
 .card{
@@ -75,27 +75,30 @@ $L-Gray-color : #d3d3d3;
 
 
 .home-container{
+  max-width: 1600px;
   width: 80%;
-  height: 80vh;
+  height: 97vh;
   background-color: $L-Gray-color;
-  border-radius: 7px;
+  border-radius: 3px;
   display: grid;
   grid-template-columns: 1fr 2fr;
   overflow: hidden;
 }
 
+
 nav{
-  
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 20px;
+  padding: 10px 16px;
   background-color: $Gray-color;
 
   img{
     border-radius: 50%;
-    width: 15%;
-    height: 15%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
   }
 
   .menuBtn{
@@ -117,23 +120,37 @@ nav{
   }
 }
 
-.ContactList{
-  padding-top: 20px;
-  height: 100%;
+.serach{
+  width: 96%;
+  border: none;
+  outline: none;
   background-color: $Dark-color;
   color: white;
-  overflow: hidden;
+  padding: 10px;
 
-  img{
-    border-radius: 50%;
-    width: 100%;
-    height: 100%;
+  &::placeholder {
+    color: lightgrey;
   }
 }
 
+.ContactList{
+  height: calc(97vh - 95px);
+  background-color: $Dark-color;
+  color: white;
+  overflow-y: scroll;
+
+  img{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+  }
+}
+
+
+
 .contact{
-  display: grid;
-  grid-template-columns: 1fr 4fr;
+  display: flex;
   gap: 10px;
   padding: 15px 10px;
   border-bottom: 1px solid $Sec-color;
@@ -143,57 +160,83 @@ nav{
   }
 
   .contact-info{
+    flex: 1;
     display: flex;
     flex-direction: column;
+    gap: 5px;
   }
 
   p{
     margin: 0;
   }
-}
 
-.title-and-date{
-  display: flex;
-  align-items: center;
-
-  h4{
-    margin: 0;
-    padding: 0;
-    margin-right: auto;
+  .title-and-date{
+    display: flex;
+    align-items: center;
+  
+    h4{
+      margin: 0;
+      padding: 0;
+      margin-right: auto;
+    }
   }
 }
+
+
 
 .Chating{
   position: relative;
-}
+  background-color: $Gray-color;
 
-.input{
-  height: 55px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  background-color: #202c33;
-  padding: 10px 25px;
+  .input{
+    height: 55px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: $Gray-color;
+    padding: 5px 16px;
+    z-index: 1;
+  
+  
+    img{
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+    }
+  
+    textarea{
+      height: 22px;
+      width: 100%;
+      padding: 10px 15px;
+      margin: 5px 10px;
+      font-size: 15px;
+      border: none;
+      outline: none;
+      background-color: #2a3942;
+      color: white;
+      border-radius: 8px;
+      font-size: 16px;
 
 
-  img{
-    width: 24px;
-    height: 24px;
-    cursor: pointer;
+      &::placeholder{
+        color: #8696a0;
+      }
+    }
   }
 
-  input{
-    width: 100%;
-    padding: 10px;
-    font-size: 15px;
-    border: none;
-    outline: none;
-    background-color: #2a3942;
-    color: white;
-    border-radius: 9px;
+  &::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image:url(../public/images/wp_132_dark.jpg);
+    background-size: contain;
   }
 }
+
